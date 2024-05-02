@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightLogNet", "FlightLogNet\FlightLogNet.csproj", "{CFF25BC5-00E3-4DEF-9C9B-534483DCA1F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightLogNet.Tests", "FlightLogNet.Tests\FlightLogNet.Tests.csproj", "{4EE754F4-E630-4C0B-B9F8-D6B744B61C8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{069E1EE1-D986-47AA-8132-C3E9C690072C}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFF25BC5-00E3-4DEF-9C9B-534483DCA1F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF25BC5-00E3-4DEF-9C9B-534483DCA1F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF25BC5-00E3-4DEF-9C9B-534483DCA1F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF25BC5-00E3-4DEF-9C9B-534483DCA1F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EE754F4-E630-4C0B-B9F8-D6B744B61C8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EE754F4-E630-4C0B-B9F8-D6B744B61C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EE754F4-E630-4C0B-B9F8-D6B744B61C8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EE754F4-E630-4C0B-B9F8-D6B744B61C8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6EF2E28E-A386-4F5F-A1A2-76949E768E02}
+	EndGlobalSection
+EndGlobal
