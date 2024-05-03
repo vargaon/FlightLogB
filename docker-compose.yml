@@ -8,5 +8,30 @@ services:
     ports:
       - "44313:44313"
     restart: always
+    depends_on:
+      - db
     environment:
       - ASPNETCORE_URLS=http://+:44313
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_SA_PASS}
+      - DB_NAME=${DB_NAME}
+    networks:
+      - flightlognet
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      MSSQL_SA_PASSWORD: ${DB_SA_PASS}
+      ACCEPT_EULA: Y
+    restart: always
+    volumes:
+      - dbdata:/var/opt/mssql
+    networks:
+      - flightlognet
+
+networks:
+  flightlognet:
+    driver: bridge
+
+volumes:
+  dbdata:
