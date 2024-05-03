@@ -25,7 +25,6 @@ namespace FlightLogNet.Repositories
         {
             string sqliteConnectionString = configuration.GetValue<string>("SqliteConnectionString");
             string npgsqlConnectionString = configuration.GetValue<string>("NpgsqlConnectionString");
-            string sqlServerConnectionString = configuration.GetValue<string>("SqlServerConnectionString");
 
             if (sqliteConnectionString is not null)
             {
@@ -34,17 +33,6 @@ namespace FlightLogNet.Repositories
             else if (npgsqlConnectionString is not null)
             {
                 optionsBuilder.UseNpgsql(npgsqlConnectionString);
-            }
-            else if (sqlServerConnectionString is not null)
-            {
-
-                var user = Environment.GetEnvironmentVariable("DB_USER");
-                var pass = Environment.GetEnvironmentVariable("DB_PASS");
-                var db = Environment.GetEnvironmentVariable("DB_NAME");
-
-                sqlServerConnectionString = string.Format(sqlServerConnectionString, db, user, pass);
-
-                optionsBuilder.UseSqlServer(sqlServerConnectionString);
             }
             else
             {
