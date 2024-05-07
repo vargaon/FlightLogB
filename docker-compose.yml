@@ -7,6 +7,8 @@ services:
     image: flightlog/app
     ports:
       - "44313:44313"
+    volumes:
+      - ./FlightLogNet/data/:/app/data/
     restart: always
     environment:
       - ASPNETCORE_URLS=http://+:44313

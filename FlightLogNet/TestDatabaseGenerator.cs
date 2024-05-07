@@ -2,7 +2,6 @@
 {
     using System;
     using System.Diagnostics;
-    using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Models;
     using Repositories;

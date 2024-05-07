@@ -36,7 +36,7 @@ namespace FlightLogNet.Repositories
             }
             else
             {
-                optionsBuilder.UseSqlite("Data Source=local.db");
+                optionsBuilder.UseSqlite("Data Source=data\\local.db");
             }
         }
     }
