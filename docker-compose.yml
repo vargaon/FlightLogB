@@ -8,7 +8,10 @@ services:
     ports:
       - "44313:44313"
     volumes:
-      - ./FlightLogNet/data/:/app/data/
+      - dbData:/app/data/
     restart: always
     environment:
       - ASPNETCORE_URLS=http://+:44313
+
+volumes:
+  dbData:

@@ -9,5 +9,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0
 RUN useradd -m webserver
 WORKDIR /app
 COPY --from=build /app/out ./
+RUN chmod -R 777 ./
 USER webserver
 ENTRYPOINT ["dotnet", "FlightLogNet.dll"]
