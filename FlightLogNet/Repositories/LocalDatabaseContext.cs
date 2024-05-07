@@ -1,7 +1,6 @@
-﻿using System;
-
-namespace FlightLogNet.Repositories
+﻿namespace FlightLogNet.Repositories
 {
+    using System.Reflection;
     using Entities;
 
     using Microsoft.EntityFrameworkCore;
@@ -36,7 +35,8 @@ namespace FlightLogNet.Repositories
             }
             else
             {
-                optionsBuilder.UseSqlite("Data Source=data\\local.db");
+                string _database = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "data\\local.db");
+                optionsBuilder.UseSqlite($"Data Source={_database}");
             }
         }
     }
