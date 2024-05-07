@@ -43,7 +43,7 @@
         {
             using var dbContext = new LocalDatabaseContext(configuration);
 
-            var firstAirplane = dbContext.Airplanes.FirstOrDefault(airplane => airplane.Id == airplaneModel.Id);
+            var firstAirplane = dbContext.ClubAirplanes.FirstOrDefault(airplane => airplane.Id == airplaneModel.Id);
             if (firstAirplane != null)
             {
                 airplaneId = firstAirplane.Id;
