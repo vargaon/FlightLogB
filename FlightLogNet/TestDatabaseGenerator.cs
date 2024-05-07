@@ -50,9 +50,9 @@
                     Address = new Address { City = null, Country = null, PostalCode = null, Street = null }
                 });
 
-            dbContext.Airplanes.AddRange(
-                new Airplane { Id = 2, GuestAirplaneImmatriculation = "OK-B128", GuestAirplaneType = "L-13A Blaník" },
-                new Airplane { Id = 1, GuestAirplaneImmatriculation = "OK-V23428", GuestAirplaneType = "Zlín Z-42M" });
+            // dbContext.Airplanes.AddRange(
+            //     new Airplane { Id = 2, GuestAirplaneImmatriculation = "OK-B128", GuestAirplaneType = "L-13A Blaník" },
+            //     new Airplane { Id = 1, GuestAirplaneImmatriculation = "OK-V23428", GuestAirplaneType = "Zlín Z-42M" });
 
             dbContext.Flights.AddRange(
                 new Flight
@@ -134,18 +134,26 @@
         {
             using var dbContext = new LocalDatabaseContext(configuration);
 
-            dbContext.ClubAirplanes.AddRange(
-                new ClubAirplane
+            dbContext.Airplanes.AddRange(
+                new Airplane
                 {
                     Id = 2,
-                    Immatriculation = "OK-B123",
-                    AirplaneType = new AirplaneType { Type = "L-13A Blaník" }
+                    ClubAirplane = new ClubAirplane
+                    {
+                        Id = 2,
+                        Immatriculation = "OK-B123",
+                        AirplaneType = new AirplaneType { Type = "L-13A Blaník" }
+                    }
                 },
-                new ClubAirplane
+                new Airplane
                 {
                     Id = 1,
-                    Immatriculation = "OK-V23424",
-                    AirplaneType = new AirplaneType { Type = "Zlín Z-42M" }
+                    ClubAirplane = new ClubAirplane
+                    {
+                        Id = 1,
+                        Immatriculation = "OK-V23424",
+                        AirplaneType = new AirplaneType { Type = "Zlín Z-42M" }
+                    }
                 });
 
             dbContext.SaveChanges();
