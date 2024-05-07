@@ -21,7 +21,7 @@
             public DateTime? Date { get; set; }
             [Index(1), Name("Typ")]
             public string AirplaneType { get; set; }
-            [Index(2), Name("Typ")]
+            [Index(2), Name("Imatrikulace")]
             public string AirplaneImmatriculation { get; set; }
             [Index(3), Name("Osádka")]
             public string PilotLastName { get; set; }
